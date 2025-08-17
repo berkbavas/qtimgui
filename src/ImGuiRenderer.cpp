@@ -187,7 +187,7 @@ void ImGuiRenderer::renderDrawList(ImDrawData *draw_data)
                     continue;
 
                 // Apply scissor/clipping rectangle (Y is inverted in OpenGL)
-                glScissor((int)(clip_min.x / sx), (int)(fb_height - clip_max.y / sy) , (int)(clip_max.x - clip_min.x) , (int)(clip_max.y - clip_min.y));
+                glScissor((int)(clip_min.x / sx), (int)(fb_height - clip_max.y / sy) , (int)((clip_max.x - clip_min.x) / sx) , (int)((clip_max.y - clip_min.y) / sy));
 
                  // Bind texture, Draw
                 glBindTexture(GL_TEXTURE_2D, (GLuint)(size_t)pcmd->GetTexID());
