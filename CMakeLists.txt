@@ -1,5 +1,5 @@
 # minimum require
-cmake_minimum_required (VERSION 3.8.1)
+cmake_minimum_required(VERSION 3.25.0)
 
 # global solution
 project(qtimgui_sln)
